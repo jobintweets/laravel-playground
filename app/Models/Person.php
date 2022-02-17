@@ -9,7 +9,7 @@ use App\Models\Broker;
 class Person extends Model
 {
     use HasFactory;
-
+// person->broker-home
     public function homeInformation(){
         //destination model-home , intermediate model - broker
         return $this->hasOneThrough(Home::class, Broker::class);
