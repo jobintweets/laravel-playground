@@ -34,3 +34,4 @@ Route::get('/product/store',[ProductController::class,'store']);
 Route::get('/product/show-data',[ProductController::class,'showData']);
 Route::get('/category/show-data',[CategoryController::class,'showData']);
 Route::get('/home', [HomeController::class, 'getHomeOfPerson']);
+Route::get('/homes', [HomeController::class, 'getHomeListOfBrokers']);

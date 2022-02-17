@@ -10,4 +10,8 @@ class HomeController extends Controller
      public function getHomeOfPerson(){
         return Person::find(1)->homeInformation;
     }
+
+    public function getHomeListOfBrokers(){
+        return Person::find(1)->homeList;
+    }
 }

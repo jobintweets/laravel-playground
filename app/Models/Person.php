@@ -14,4 +14,10 @@ class Person extends Model
         //destination model-home , intermediate model - broker
         return $this->hasOneThrough(Home::class, Broker::class);
     }
+//has many through example
+//list of all homes that belongs to a broker
+    public function homeList()
+    {
+        return $this->hasManyThrough(Home::class, Broker::class);
+    }
 }
