@@ -5,7 +5,10 @@ use App\Http\Controllers\IdentitycardController;
 use App\Http\Controllers\BrandController; 
 
 use App\Http\Controllers\ProductController; 
-use App\Http\Controllers\CategoryController; 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController; 
+
+
 
 
 
@@ -30,3 +33,4 @@ Route::get('/product',[ProductController::class,'index']);
 Route::get('/product/store',[ProductController::class,'store']);
 Route::get('/product/show-data',[ProductController::class,'showData']);
 Route::get('/category/show-data',[CategoryController::class,'showData']);
+Route::get('/home', [HomeController::class, 'getHomeOfPerson']);
