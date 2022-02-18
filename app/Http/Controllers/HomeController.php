@@ -12,6 +12,6 @@ class HomeController extends Controller
     }
 
     public function getHomeListOfBrokers(){
-        return Person::find(1)->homeList;
+        return Person::find(2)->homeList;
     }
 }

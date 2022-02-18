@@ -7,6 +7,7 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProductController; 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController; 
+use App\Http\Controllers\UserController; 
 
 
 
@@ -35,3 +36,8 @@ Route::get('/product/show-data',[ProductController::class,'showData']);
 Route::get('/category/show-data',[CategoryController::class,'showData']);
 Route::get('/home', [HomeController::class, 'getHomeOfPerson']);
 Route::get('/homes', [HomeController::class, 'getHomeListOfBrokers']);
+
+//csv uploading importing routes
+Route::get('file-import-export', [UserController::class, 'fileImportExport']);
+Route::post('file-import', [UserController::class, 'fileImport'])->name('file-import');
+Route::get('file-export', [UserController::class, 'fileExport'])->name('file-export');
